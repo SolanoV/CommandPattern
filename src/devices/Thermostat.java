@@ -39,13 +39,13 @@ public class Thermostat implements Device, Variables {
     public String setValue(int value) {
         if(value<16||value>25)temperature=25;
         else temperature = value;
-        return "[Set brightness to "+temperature+"°C]";
+        return "[Set temperature to "+temperature+"°C]\n";
     }
 
     @Override
     public String setDefaultValue(int defaultValue) {
         if(defaultValue<16||defaultValue>25)temperature=25;
         else defaultTemperature = defaultValue;
-        return "[Set default temperature to "+defaultTemperature+"°C]";
+        return "[Set default temperature to "+defaultTemperature+"°C]\n";
     }
 }
